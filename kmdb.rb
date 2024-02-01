@@ -260,26 +260,11 @@ new_role.save
 
 hathaway = Actor.find_by({"name" => "Anne Hathaway"})
 new_role = Role.new
-new_role["character_name"] = "John Blake"
+new_role["character_name"] = "Selina Kyle"
 new_role["movie_id"] = dark_knight_rises["id"]
 new_role["actor_id"] = hathaway["id"]
 new_role.save
 
-# Batman Begins          Christian Bale        Bruce Wayne
-# Batman Begins          Michael Caine         Alfred
-# Batman Begins          Liam Neeson           Ra's Al Ghul
-# Batman Begins          Katie Holmes          Rachel Dawes
-# Batman Begins          Gary Oldman           Commissioner Gordon
-# The Dark Knight        Christian Bale        Bruce Wayne
-# The Dark Knight        Heath Ledger          Joker
-# The Dark Knight        Aaron Eckhart         Harvey Dent
-# The Dark Knight        Michael Caine         Alfred
-# The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
-# The Dark Knight Rises  Christian Bale        Bruce Wayne
-# The Dark Knight Rises  Gary Oldman           Commissioner Gordon
-# The Dark Knight Rises  Tom Hardy             Bane
-# The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
-# The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 # Prints a header for the movies output
 puts "Movies"
@@ -306,3 +291,11 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+all_cast = Role.all
+for role in all_cast
+    role_name = role["character_name"]
+    # this_movie = Movie.where("id" => role["movie_id"])
+    # this_movie_name = this_movie["title"]
+    # puts "#{role_name} #{this_movie_name}"
+    puts "#{role_name}"
+end 
