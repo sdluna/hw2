@@ -168,9 +168,102 @@ bale = Actor.find_by({"name" => "Christian Bale"})
 new_role = Role.new
 new_role["character_name"] = "Bruce Wayne"
 new_role["movie_id"] = batman_begins["id"]
+new_role["actor_id"] = bale["id"]
 new_role.save
-puts new_role.inspect
 
+caine = Actor.find_by({"name" => "Michael Caine"})
+new_role = Role.new
+new_role["character_name"] = "Alfred"
+new_role["movie_id"] = batman_begins["id"]
+new_role["actor_id"] = caine["id"]
+new_role.save
+
+neeson = Actor.find_by({"name" => "Liam Neeson"})
+new_role = Role.new
+new_role["character_name"] = "Ra's Al Ghul"
+new_role["movie_id"] = batman_begins["id"]
+new_role["actor_id"] = neeson["id"]
+new_role.save
+
+holmes = Actor.find_by({"name" => "Katie Holmes"})
+new_role = Role.new
+new_role["character_name"] = "Rachel Dawes"
+new_role["movie_id"] = batman_begins["id"]
+new_role["actor_id"] = holmes["id"]
+new_role.save
+
+oldman = Actor.find_by({"name" => "Gary Oldman"})
+new_role = Role.new
+new_role["character_name"] = "Commissioner Gordon"
+new_role["movie_id"] = batman_begins["id"]
+new_role["actor_id"] = oldman["id"]
+new_role.save
+
+new_role = Role.new
+new_role["character_name"] = "Bruce Wayne"
+new_role["movie_id"] = dark_knight["id"]
+new_role["actor_id"] = bale["id"]
+new_role.save
+
+ledger = Actor.find_by({"name" => "Heath Ledger"})
+new_role = Role.new
+new_role["character_name"] = "Joker"
+new_role["movie_id"] = dark_knight["id"]
+new_role["actor_id"] = ledger["id"]
+new_role.save
+
+eckhart = Actor.find_by({"name" => "Aaron Eckhart"})
+new_role = Role.new
+new_role["character_name"] = "Harvey Dent"
+new_role["movie_id"] = dark_knight["id"]
+new_role["actor_id"] = eckhart["id"]
+new_role.save
+
+new_role = Role.new
+new_role["character_name"] = "Alfred"
+new_role["movie_id"] = dark_knight["id"]
+new_role["actor_id"] = caine["id"]
+new_role.save
+
+gyllenhaal = Actor.find_by({"name" => "Maggie Gyllenhaal"})
+new_role = Role.new
+new_role["character_name"] = "Rachel Dawes"
+new_role["movie_id"] = dark_knight["id"]
+new_role["actor_id"] = gyllenhaal["id"]
+new_role.save
+
+new_role = Role.new
+new_role["character_name"] = "Bruce Wayne"
+new_role["movie_id"] = dark_knight_rises["id"]
+new_role["actor_id"] = bale["id"]
+new_role.save
+
+new_role = Role.new
+new_role["character_name"] = "Commissioner Gordon"
+new_role["movie_id"] = dark_knight_rises["id"]
+new_role["actor_id"] = oldman["id"]
+new_role.save
+
+hardy = Actor.find_by({"name" => "Tom Hardy"})
+new_role = Role.new
+new_role["character_name"] = "Bane"
+new_role["movie_id"] = dark_knight_rises["id"]
+new_role["actor_id"] = hardy["id"]
+new_role.save
+
+levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+new_role = Role.new
+new_role["character_name"] = "John Blake"
+new_role["movie_id"] = dark_knight_rises["id"]
+new_role["actor_id"] = levitt["id"]
+new_role.save
+
+hathaway = Actor.find_by({"name" => "Anne Hathaway"})
+new_role = Role.new
+new_role["character_name"] = "John Blake"
+new_role["movie_id"] = dark_knight_rises["id"]
+new_role["actor_id"] = hathaway["id"]
+new_role.save
 
 # Batman Begins          Christian Bale        Bruce Wayne
 # Batman Begins          Michael Caine         Alfred
