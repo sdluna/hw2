@@ -279,7 +279,8 @@ for movie in all_movies
     name = movie["title"]
     year = movie["year_released"]
     rating = movie["rated"]
-    puts "#{name} #{year} #{rating}"
+    studio = Studio.where("id" => movie["studio_id"])[0]
+    puts "#{name} #{year} #{rating} #{studio["name"]}"
 end
 
 
@@ -294,8 +295,9 @@ puts ""
 all_cast = Role.all
 for role in all_cast
     role_name = role["character_name"]
-    # this_movie = Movie.where("id" => role["movie_id"])
-    # this_movie_name = this_movie["title"]
-    # puts "#{role_name} #{this_movie_name}"
-    puts "#{role_name}"
+    this_movie = Movie.where("id" => role["movie_id"])[0]
+    this_movie_name = this_movie["title"]
+    this_actor = Actor.where("id" => role["actor_id"])[0]
+    this_actor_name = this_actor["name"]
+    puts "#{this_movie_name} #{this_actor_name} #{role_name}"
 end 
